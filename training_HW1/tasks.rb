@@ -103,3 +103,15 @@ count18 = 0
 t18.each_cons(3) { |x, y, z| count18 += 1 if x > y && y < z }
 puts "Result: #{count17}"
 puts SEPARATOR
+puts tasks[19]
+puts "Source array: #{t19 = Array.new(15) { rand(-50..50) }}"
+arr19 = []
+t19.each_cons(3) { |x, y, z| arr19 << y if x < y && y > z }
+puts "Result: #{arr19.max}"
+puts SEPARATOR
+puts tasks[20]
+puts "Source array: #{t20 = Array.new(15) { rand(-50..50) }}"
+arr20 = []
+t20.each_cons(3) { |x, y, z| arr20 << y if x > y && y < z }
+puts "Result: #{arr20.min}"
+puts SEPARATOR
