@@ -167,4 +167,21 @@ puts "Result: #{t29.sort}"
 puts SEPARATOR
 puts tasks[30]
 puts "Source array: #{t30 = Array.new(15) { rand(-50..50) }}"
-puts "Result: #{t29.sort.reverse}"
+puts "Result: #{t30.sort.reverse}"
+puts SEPARATOR
+puts tasks[31]
+puts "Source array: #{t31 = Array.new(15) { rand(-50..50) }}"
+arr31 = []
+t31.each_with_index { |el, i| arr31 << [el, i] }
+arr31_new = []
+arr31.each(&:first).sort.reverse.each { |arr| arr31_new << arr.last }
+puts "Result: #{arr31_new}"
+puts SEPARATOR
+puts tasks[32]
+puts "Source array: #{t32 = Array.new(15) { rand(-50..50) }}"
+arr32 = []
+t32.each_with_index { |el, i| arr32 << [el, i] }
+arr32_new = []
+arr32.each(&:first).sort.each { |arr| arr32_new << arr.last }
+puts "Result: #{arr32_new}"
+puts SEPARATOR
