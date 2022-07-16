@@ -63,3 +63,11 @@ puts tasks[12]
 puts "Source array: #{t12 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t12.map { |el| el.negative? ? t12.max : el }}"
 puts SEPARATOR
+puts tasks[13]
+puts "Source array: #{t13 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t13.rotate}"
+puts SEPARATOR
+puts tasks[14]
+puts "Source array: #{t14 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t14.rotate(-1)}"
+puts SEPARATOR
