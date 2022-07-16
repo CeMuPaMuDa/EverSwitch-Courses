@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 SEPARATOR = '**********************************************************************'
-f = File.open('EverSwitch-Courses/training_HW1/doc/tasks.txt', 'r')
+f = File.open('doc/tasks.txt', 'r')
 tasks = f.readlines(chomp: true)
 
 puts SEPARATOR
@@ -78,7 +78,16 @@ puts "Source array: #{t15 = Array.new(15) { rand(-50..50) }}"
 # puts "Source array: #{t15 = [1, 5, 9, 13, 17]}"
 diff = t15[1] - t15[0]
 res15 = [t15.first] +
-        t15.slice(1...(t7.size - 1))
+        t15.slice(1...(t15.size))
            .map.with_index { |_, i| t15[i] + diff }
 puts "Result: #{res15 == t15 ? diff : 'nil'}"
 puts SEPARATOR
+puts tasks[16]
+puts "Source array: #{t16 = Array.new(15) { rand(-50..50) }}"
+# puts "Source array: #{t16 = [2, 4, 8, 16, 32]}"
+denom = t16[1].to_f / t16[0]
+
+res16 = [t16.first] +
+        t16.slice(1...(t16.size))
+           .map.with_index { |_, i| (t16[i] * denom).to_i }
+puts "Result: #{res16 == t16 ? denom.to_i : 'nil'}"
