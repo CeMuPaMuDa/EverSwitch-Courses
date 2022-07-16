@@ -80,14 +80,26 @@ diff = t15[1] - t15[0]
 res15 = [t15.first] +
         t15.slice(1...(t15.size))
            .map.with_index { |_, i| t15[i] + diff }
-puts "Result: #{res15 == t15 ? diff : 'nil'}"
+puts "Result: #{(res15 == t15 ? diff : nil).inspect}"
 puts SEPARATOR
 puts tasks[16]
 puts "Source array: #{t16 = Array.new(15) { rand(-50..50) }}"
 # puts "Source array: #{t16 = [2, 4, 8, 16, 32]}"
-denom = t16[1].to_f / t16[0]
-
+denom = t16[1].to_f / t16[0] if t16.first != 0
 res16 = [t16.first] +
         t16.slice(1...(t16.size))
            .map.with_index { |_, i| (t16[i] * denom).to_i }
-puts "Result: #{res16 == t16 ? denom.to_i : 'nil'}"
+puts "Result: #{(res16 == t16 ? denom.to_i : nil).inspect}"
+puts SEPARATOR
+puts tasks[17]
+puts "Source array: #{t17 = Array.new(15) { rand(-50..50) }}"
+count17 = 0
+t17.each_cons(3) { |x, y, z| count17 += 1 if x < y && y > z }
+puts "Result: #{count17}"
+puts SEPARATOR
+puts tasks[18]
+puts "Source array: #{t18 = Array.new(15) { rand(-50..50) }}"
+count18 = 0
+t18.each_cons(3) { |x, y, z| count18 += 1 if x > y && y < z }
+puts "Result: #{count17}"
+puts SEPARATOR
