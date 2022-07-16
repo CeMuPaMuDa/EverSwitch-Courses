@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 SEPARATOR = '**********************************************************************'
 f = File.open('EverSwitch-Courses/training_HW1/doc/tasks.txt', 'r')
 tasks = f.readlines(chomp: true)
@@ -70,4 +72,13 @@ puts SEPARATOR
 puts tasks[14]
 puts "Source array: #{t14 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t14.rotate(-1)}"
+puts SEPARATOR
+puts tasks[15]
+puts "Source array: #{t15 = Array.new(15) { rand(-50..50) }}"
+# puts "Source array: #{t15 = [1, 5, 9, 13, 17]}"
+diff = t15[1] - t15[0]
+res15 = [t15.first] +
+        t15.slice(1...(t7.size - 1))
+           .map.with_index { |_, i| t15[i] + diff }
+puts "Result: #{res15 == t15 ? diff : 'nil'}"
 puts SEPARATOR
