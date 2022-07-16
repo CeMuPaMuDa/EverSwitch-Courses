@@ -145,3 +145,19 @@ r_num24 = t24.each_with_object([]) { |el, arr| arr << (el - r24).abs }
 result24 = t24[r_num24.index(r_num24.max)]
 puts "Result: #{r_num24.index(r_num24.max) + 1}-nth element, Number #{result24}"
 puts SEPARATOR
+puts tasks[25]
+puts "Source array: #{t25 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t25.map { |el| el.positive? ? [t25.first, el] : el }.flatten}"
+puts SEPARATOR
+puts tasks[26]
+puts "Source array: #{t26 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t26.map { |el| el.negative? ? [t26.first, el] : el }.flatten}"
+puts SEPARATOR
+puts tasks[27]
+puts "Source array: #{t27 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t27.map { |el| el.positive? ? [el, t27.first] : el }.flatten}"
+puts SEPARATOR
+puts tasks[28]
+puts "Source array: #{t28 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t28.map { |el| el.negative? ? [el, t28.first] : el }.flatten}"
+puts SEPARATOR
