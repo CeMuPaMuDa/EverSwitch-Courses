@@ -161,3 +161,10 @@ puts tasks[28]
 puts "Source array: #{t28 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t28.map { |el| el.negative? ? [el, t28.first] : el }.flatten}"
 puts SEPARATOR
+puts tasks[29]
+puts "Source array: #{t29 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t29.sort}"
+puts SEPARATOR
+puts tasks[30]
+puts "Source array: #{t30 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t29.sort.reverse}"
