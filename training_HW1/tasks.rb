@@ -115,3 +115,19 @@ arr20 = []
 t20.each_cons(3) { |x, y, z| arr20 << y if x > y && y < z }
 puts "Result: #{arr20.min}"
 puts SEPARATOR
+puts tasks[21]
+puts "Source array: #{t21 = Array.new(15) { rand(-50..50) }}"
+count21 = 0
+t21.each_with_index do |_, i|
+  count21 += 1 if ![0, (t21.size - 1)].include?(i) && (t21[i] >= t21[i - 1] && t21[i] >= t21[i + 1])
+end
+puts "Result: #{count21}"
+puts SEPARATOR
+puts tasks[22]
+puts "Source array: #{t22 = Array.new(15) { rand(-50..50) }}"
+count22 = 0
+t22.each_with_index do |_, i|
+  count22 += 1 if ![0, (t22.size - 1)].include?(i) && (t22[i] < t22[i - 1] && t22[i] < t22[i + 1])
+end
+puts "Result: #{count22}"
+puts SEPARATOR
