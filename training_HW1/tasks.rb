@@ -131,3 +131,17 @@ t22.each_with_index do |_, i|
 end
 puts "Result: #{count22}"
 puts SEPARATOR
+puts tasks[23]
+puts "R-number: #{r23 = rand(-50.0..50.0).round(2)}"
+puts "Source array: #{t23 = Array.new(15) { rand(-50.00..50.00).round(2) }}"
+r_num23 = t23.each_with_object([]) { |el, arr| arr << (el - r23).abs }
+result23 = t23[r_num23.index(r_num23.min)]
+puts "Result: #{r_num23.index(r_num23.min) + 1}-nth element, Number #{result23}"
+puts SEPARATOR
+puts tasks[24]
+puts "R-number: #{r24 = rand(-50.0..50.0).round(2)}"
+puts "Source array: #{t24 = Array.new(15) { rand(-50.00..50.00).round(2) }}"
+r_num24 = t24.each_with_object([]) { |el, arr| arr << (el - r24).abs }
+result24 = t24[r_num24.index(r_num24.max)]
+puts "Result: #{r_num24.index(r_num24.max) + 1}-nth element, Number #{result24}"
+puts SEPARATOR
