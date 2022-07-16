@@ -47,3 +47,19 @@ puts "Result: #{[t8.first] +
       .map { |x| x.odd? ? (x + t8.first) : x } +
       [t8.last]}"
 puts SEPARATOR
+puts tasks[9]
+puts "Source array: #{t9 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t9.map { |el| el.positive? ? t9.min : el }}"
+puts SEPARATOR
+puts tasks[10]
+puts "Source array: #{t10 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t10.map { |el| el.positive? ? t10.max : el }}"
+puts SEPARATOR
+puts tasks[11]
+puts "Source array: #{t11 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t11.map { |el| el.negative? ? t11.min : el }}"
+puts SEPARATOR
+puts tasks[12]
+puts "Source array: #{t12 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t12.map { |el| el.negative? ? t12.max : el }}"
+puts SEPARATOR
