@@ -221,3 +221,27 @@ max40 = t40.max
 arr40 = t40.each_with_object([]) { |el, arr| arr << el if el == max40 }
 puts "Result: #{arr40.size}"
 puts SEPARATOR
+puts tasks[41]
+puts "Source array: #{t41 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t41.select(&:even?).min}"
+puts SEPARATOR
+puts tasks[42]
+puts "Source array: #{t42 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t42.select(&:odd?).min}"
+puts SEPARATOR
+puts tasks[43]
+puts "Source array: #{t43 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t43.select(&:even?).max}"
+puts SEPARATOR
+puts tasks[44]
+puts "Source array: #{t44 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t44.select(&:odd?).max}"
+puts SEPARATOR
+puts tasks[45]
+puts "Source array: #{t45 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t45.select(&:positive?).min}"
+puts SEPARATOR
+puts tasks[46]
+puts "Source array: #{t46 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t46.select(&:negative?).max}"
+puts SEPARATOR
