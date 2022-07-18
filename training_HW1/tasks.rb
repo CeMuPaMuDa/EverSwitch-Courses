@@ -271,17 +271,29 @@ puts "Result: #{(t52.size - t52.index(t52.min)) - 1} elements"
 puts SEPARATOR
 puts tasks[53]
 puts "Source array: #{t53 = Array.new(15) { rand(-5..5) }}"
-puts "Result: #{(t53.rindex(t53.max))} elements"
+puts "Result: #{t53.rindex(t53.max)} elements"
 puts SEPARATOR
 puts tasks[54]
 puts "Source array: #{t54 = Array.new(15) { rand(-5..5) }}"
-puts "Result: #{(t54.rindex(t54.min))} elements"
+puts "Result: #{t54.rindex(t54.min)} elements"
 puts SEPARATOR
 puts tasks[55]
 puts "Source array: #{t55 = Array.new(15) { rand(-5..5) }}"
-puts "Result: #{t55.size - (t55.rindex(t55.max)) - 1} elements"
+puts "Result: #{t55.size - t55.rindex(t55.max) - 1} elements"
 puts SEPARATOR
 puts tasks[56]
 puts "Source array: #{t56 = Array.new(15) { rand(-5..5) }}"
-puts "Result: #{t56.size - (t56.rindex(t56.min)) - 1} elements"
+puts "Result: #{t56.size - t56.rindex(t56.min) - 1} elements"
+puts SEPARATOR
+puts tasks[57]
+puts "Source array: #{t57 = Array.new(15) { rand(-5..5) }}"
+imax57 = t57.index(t57.max)
+imin57 = t57.index(t57.min)
+puts "Result: #{imax57 < imin57 ? imax57 : imin57}"
+puts SEPARATOR
+puts tasks[58]
+puts "Source array: #{t58 = Array.new(15) { rand(-5..5) }}"
+imax58 = t58.rindex(t58.max)
+imin58 = t58.rindex(t58.min)
+puts "Result: #{imax58 > imin58 ? imax58 : imin58}"
 puts SEPARATOR
