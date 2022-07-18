@@ -193,3 +193,19 @@ puts tasks[34]
 puts "Source array: #{t34 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t34.index(t34.max)}"
 puts SEPARATOR
+puts tasks[35]
+puts "Source array: #{t35 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t35.index(t35.min)}"
+puts SEPARATOR
+puts tasks[36]
+puts "Source array: #{t36 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t36.index(t36.max)}"
+puts SEPARATOR
+puts tasks[37]
+puts "Source array: #{t37 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t37.rindex(t37.min)}"
+puts SEPARATOR
+puts tasks[38]
+puts "Source array: #{t38 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t38.rindex(t38.max)}"
+puts SEPARATOR
