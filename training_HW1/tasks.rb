@@ -185,3 +185,11 @@ arr32_new = []
 arr32.each(&:first).sort.each { |arr| arr32_new << arr.last }
 puts "Result: #{arr32_new}"
 puts SEPARATOR
+puts tasks[33]
+puts "Source array: #{t33 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t33.index(t33.min)}"
+puts SEPARATOR
+puts tasks[34]
+puts "Source array: #{t34 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t34.index(t34.max)}"
+puts SEPARATOR
