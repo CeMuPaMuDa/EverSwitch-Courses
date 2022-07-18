@@ -297,3 +297,15 @@ imax58 = t58.rindex(t58.max)
 imin58 = t58.rindex(t58.min)
 puts "Result: #{imax58 > imin58 ? imax58 : imin58}"
 puts SEPARATOR
+puts tasks[59]
+puts "Source array: #{t59 = Array.new(15) { rand(-2..2) }}"
+fst_min = t59.index(t59.min)
+lst_min = t59.rindex(t59.min)
+puts "Result: #{(lst_min - fst_min) - 1}"
+puts SEPARATOR
+puts tasks[59]
+puts "Source array: #{t60 = Array.new(15) { rand(-2..2) }}"
+fst_max = t60.index(t60.max)
+lst_max = t60.rindex(t60.max)
+puts "Result: #{(lst_max - fst_max) - 1}"
+puts SEPARATOR
