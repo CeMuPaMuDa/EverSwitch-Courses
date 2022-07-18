@@ -209,3 +209,15 @@ puts tasks[38]
 puts "Source array: #{t38 = Array.new(15) { rand(-5..5) }}"
 puts "Result: #{t38.rindex(t38.max)}"
 puts SEPARATOR
+puts tasks[39]
+puts "Source array: #{t39 = Array.new(15) { rand(-5..5) }}"
+min39 = t39.min
+arr39 = t39.each_with_object([]) { |el, arr| arr << el if el == min39 }
+puts "Result: #{arr39.size}"
+puts SEPARATOR
+puts tasks[40]
+puts "Source array: #{t40 = Array.new(15) { rand(-5..5) }}"
+max40 = t40.max
+arr40 = t40.each_with_object([]) { |el, arr| arr << el if el == max40 }
+puts "Result: #{arr40.size}"
+puts SEPARATOR
