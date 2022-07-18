@@ -353,3 +353,29 @@ puts tasks[66]
 puts "Source array: #{t66 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t66.partition(&:odd?)}"
 puts SEPARATOR
+puts tasks[67]
+puts "Source array: #{t67 = Array.new(3) { rand(-50..50) }}"
+bool67 = t67.first.even?
+res67 = []
+t67.each do |el|
+  if el.even? == bool67
+    bool67 = !bool67
+  else
+    res67 << el
+  end
+end
+puts "Result: #{res67.empty?}"
+puts SEPARATOR
+puts tasks[68]
+puts "Source array: #{t68 = Array.new(3) { rand(-50..50) }}"
+bool68 = t68.first < 0
+res68 = []
+t68.each do |el|
+  if (el < 0) == bool68
+    bool68 = !bool68
+  else
+    res68 << el
+  end
+end
+puts "Result: #{res68.empty?}"
+puts SEPARATOR
