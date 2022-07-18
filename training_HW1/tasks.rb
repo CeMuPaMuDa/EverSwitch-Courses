@@ -317,3 +317,39 @@ puts tasks[62]
 puts "Source array: #{t62 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t62.min(2)}"
 puts SEPARATOR
+puts tasks[63]
+puts "Source array: #{t63 = Array.new(15) { rand(-1..1) }}"
+count63 = 0
+min_el = t63.min
+count_arr63 = t63.each_with_object([]) do |el, arr|
+  if el == min_el
+    count63 += 1
+  else
+    arr << count63
+    count63 = 0
+  end
+end
+puts "Result: #{count_arr63.max}"
+puts SEPARATOR
+puts tasks[64]
+puts "Source array: #{t64 = Array.new(15) { rand(-1..1) }}"
+count64 = 0
+max_el = t64.max
+count_arr64 = t64.each_with_object([]) do |el, arr|
+  if el == max_el
+    count64 += 1
+  else
+    arr << count64
+    count64 = 0
+  end
+end
+puts "Result: #{count_arr64.max}"
+puts SEPARATOR
+puts tasks[65]
+puts "Source array: #{t65 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t65.partition(&:even?)}"
+puts SEPARATOR
+puts tasks[66]
+puts "Source array: #{t66 = Array.new(15) { rand(-50..50) }}"
+puts "Result: #{t66.partition(&:odd?)}"
+puts SEPARATOR
