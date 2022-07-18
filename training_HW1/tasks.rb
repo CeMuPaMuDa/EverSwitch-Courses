@@ -212,12 +212,12 @@ puts SEPARATOR
 puts tasks[39]
 puts "Source array: #{t39 = Array.new(15) { rand(-5..5) }}"
 min39 = t39.min
-puts "Result: #{t39.select{ |el| el == min39 }.size}"
+puts "Result: #{t39.select { |el| el == min39 }.size}"
 puts SEPARATOR
 puts tasks[40]
 puts "Source array: #{t40 = Array.new(15) { rand(-5..5) }}"
 max40 = t40.max
-puts "Result: #{t40.select{ |el| el == max40 }.size}"
+puts "Result: #{t40.select { |el| el == max40 }.size}"
 puts SEPARATOR
 puts tasks[41]
 puts "Source array: #{t41 = Array.new(15) { rand(-50..50) }}"
@@ -245,11 +245,43 @@ puts "Result: #{t46.select(&:negative?).max}"
 puts SEPARATOR
 puts tasks[47]
 puts "Source array: #{t47 = Array.new(15) { rand(-50..50) }}"
-puts "Interval: #{i47 = (rand(-50..0)..rand(1..50)) }"
-puts "Result: #{t47.select{|el| i47.include? el }.min}"
+puts "Interval: #{i47 = (rand(-50..0)..rand(1..50))}"
+puts "Result: #{t47.select { |el| i47.include? el }.min}"
 puts SEPARATOR
 puts tasks[48]
 puts "Source array: #{t48 = Array.new(15) { rand(-50..50) }}"
-puts "Interval: #{i48 = (rand(-50..0)..rand(1..50)) }"
-puts "Result: #{t48.select{|el| i48.include? el }.max}"
+puts "Interval: #{i48 = (rand(-50..0)..rand(1..50))}"
+puts "Result: #{t48.select { |el| i48.include? el }.max}"
+puts SEPARATOR
+puts tasks[49]
+puts "Source array: #{t49 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t49.index(t49.min)} elements"
+puts SEPARATOR
+puts tasks[50]
+puts "Source array: #{t50 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t50.index(t50.max)} elements"
+puts SEPARATOR
+puts tasks[51]
+puts "Source array: #{t51 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{(t51.size - t51.index(t51.max)) - 1} elements"
+puts SEPARATOR
+puts tasks[52]
+puts "Source array: #{t52 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{(t52.size - t52.index(t52.min)) - 1} elements"
+puts SEPARATOR
+puts tasks[53]
+puts "Source array: #{t53 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{(t53.rindex(t53.max))} elements"
+puts SEPARATOR
+puts tasks[54]
+puts "Source array: #{t54 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{(t54.rindex(t54.min))} elements"
+puts SEPARATOR
+puts tasks[55]
+puts "Source array: #{t55 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t55.size - (t55.rindex(t55.max)) - 1} elements"
+puts SEPARATOR
+puts tasks[56]
+puts "Source array: #{t56 = Array.new(15) { rand(-5..5) }}"
+puts "Result: #{t56.size - (t56.rindex(t56.min)) - 1} elements"
 puts SEPARATOR
