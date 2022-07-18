@@ -368,14 +368,46 @@ puts "Result: #{res67.empty?}"
 puts SEPARATOR
 puts tasks[68]
 puts "Source array: #{t68 = Array.new(3) { rand(-50..50) }}"
-bool68 = t68.first < 0
+bool68 = t68.first.negative?
 res68 = []
 t68.each do |el|
-  if (el < 0) == bool68
+  if el.negative? == bool68
     bool68 = !bool68
   else
     res68 << el
   end
 end
 puts "Result: #{res68.empty?}"
+puts SEPARATOR
+puts tasks[69]
+puts "R-number: #{r69 = rand(-50.0..50.0).round(2)}"
+puts "Source array: #{t69 = Array.new(15) { rand(-50.00..50.00).round(2) }}"
+no_l69 = t69[0..t69.size - 2]
+no_f69 = t69[1..t69.size - 1]
+arr69 = []
+no_l69.each_with_index do |x, ix|
+  no_f69.each_with_index do |y, iy|
+    arr69 << [ix, iy + 1, (x + y).round(2)]
+  end
+end
+
+r_num69 = arr69.each_with_object([]) { |el, arr| arr << (el.last - r69).abs }
+result69 = arr69[r_num69.index(r_num69.min)]
+puts "Result: #{t69[result69.first]} + #{t69[result69[1]]} = #{result69.last}"
+puts SEPARATOR
+puts tasks[70]
+puts "R-number: #{r70 = rand(-50.0..50.0).round(2)}"
+puts "Source array: #{t70 = Array.new(15) { rand(-50.00..50.00).round(2) }}"
+no_l70 = t70[0..t70.size - 2]
+no_f70 = t70[1..t70.size - 1]
+arr70 = []
+no_l70.each_with_index do |x, ix|
+  no_f70.each_with_index do |y, iy|
+    arr70 << [ix, iy + 1, (x + y).round(2)]
+  end
+end
+
+r_num70 = arr70.each_with_object([]) { |el, arr| arr << (el.last - r70).abs }
+result70 = arr70[r_num70.index(r_num70.max)]
+puts "Result: #{t70[result70.first]} + #{t70[result70[1]]} = #{result70.last}"
 puts SEPARATOR
