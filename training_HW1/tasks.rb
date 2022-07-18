@@ -74,7 +74,7 @@ puts "Source array: #{t14 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t14.rotate(-1)}"
 puts SEPARATOR
 puts tasks[15]
-puts "Source array: #{t15 = Array.new(15) { rand(-50..50) }}"
+puts "Source array: #{t15 = Array.new(5) { rand(-50..50) }}"
 # puts "Source array: #{t15 = [1, 5, 9, 13, 17]}"
 diff = t15[1] - t15[0]
 res15 = [t15.first] +
@@ -83,7 +83,7 @@ res15 = [t15.first] +
 puts "Result: #{(res15 == t15 ? diff : nil).inspect}"
 puts SEPARATOR
 puts tasks[16]
-puts "Source array: #{t16 = Array.new(15) { rand(-50..50) }}"
+puts "Source array: #{t16 = Array.new(5) { rand(1..50) }}"
 # puts "Source array: #{t16 = [2, 4, 8, 16, 32]}"
 denom = t16[1].to_f / t16[0] if t16.first != 0
 res16 = [t16.first] +
@@ -174,7 +174,7 @@ puts "Source array: #{t31 = Array.new(15) { rand(-50..50) }}"
 arr31 = []
 t31.each_with_index { |el, i| arr31 << [el, i] }
 arr31_new = []
-arr31.each(&:first).sort.reverse.each { |arr| arr31_new << arr.last }
+arr31.sort.reverse.each { |arr| arr31_new << arr.last }
 puts "Result: #{arr31_new}"
 puts SEPARATOR
 puts tasks[32]
@@ -182,7 +182,7 @@ puts "Source array: #{t32 = Array.new(15) { rand(-50..50) }}"
 arr32 = []
 t32.each_with_index { |el, i| arr32 << [el, i] }
 arr32_new = []
-arr32.each(&:first).sort.each { |arr| arr32_new << arr.last }
+arr32.sort.each { |arr| arr32_new << arr.last }
 puts "Result: #{arr32_new}"
 puts SEPARATOR
 puts tasks[33]
@@ -212,14 +212,12 @@ puts SEPARATOR
 puts tasks[39]
 puts "Source array: #{t39 = Array.new(15) { rand(-5..5) }}"
 min39 = t39.min
-arr39 = t39.each_with_object([]) { |el, arr| arr << el if el == min39 }
-puts "Result: #{arr39.size}"
+puts "Result: #{t39.select{ |el| el == min39 }.size}"
 puts SEPARATOR
 puts tasks[40]
 puts "Source array: #{t40 = Array.new(15) { rand(-5..5) }}"
 max40 = t40.max
-arr40 = t40.each_with_object([]) { |el, arr| arr << el if el == max40 }
-puts "Result: #{arr40.size}"
+puts "Result: #{t40.select{ |el| el == max40 }.size}"
 puts SEPARATOR
 puts tasks[41]
 puts "Source array: #{t41 = Array.new(15) { rand(-50..50) }}"
@@ -244,4 +242,14 @@ puts SEPARATOR
 puts tasks[46]
 puts "Source array: #{t46 = Array.new(15) { rand(-50..50) }}"
 puts "Result: #{t46.select(&:negative?).max}"
+puts SEPARATOR
+puts tasks[47]
+puts "Source array: #{t47 = Array.new(15) { rand(-50..50) }}"
+puts "Interval: #{i47 = (rand(-50..0)..rand(1..50)) }"
+puts "Result: #{t47.select{|el| i47.include? el }.min}"
+puts SEPARATOR
+puts tasks[48]
+puts "Source array: #{t48 = Array.new(15) { rand(-50..50) }}"
+puts "Interval: #{i48 = (rand(-50..0)..rand(1..50)) }"
+puts "Result: #{t48.select{|el| i48.include? el }.max}"
 puts SEPARATOR
